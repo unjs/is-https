@@ -10,7 +10,7 @@ Install package
 yarn add is-https # or npm install is-https
 ```
 
-Exported function blueprint is `isHTTPS (req, xForwardedProto = true): Boolean`.
+Exported function blueprint is `isHTTPS(req, xForwardedProto=true): Boolean`.
 
 ## Behaviour
 This function tries to use 3 standard checks for HTTPS detection:
@@ -23,6 +23,11 @@ Return value:
 - If **one** of tests is **passing**, function return `true`
 - If **all** tests are **unavailable**, function returns `null`
 - Else function returns `false`
+
+**TIP** It is always better checking with `isHttps(req) !== false` to avoid false positive redirects.
+
+## Related
+- [redirect-ssl](https://www.npmjs.com/package/redirect-ssl) - Connect middleware to enforce https
 
 ## License
 MIT - [Nuxt.js](https://nuxtjs.org)
