@@ -1,0 +1,9 @@
+{
+  "name": "is-https",
+  "version": "1.0.0",
+  "description": "Check if the given request is HTTPS",
+  "main": "index.js",
+  "repository": "git@github.com:nuxt-community/is-https.git",
+  "author": "Pooya Parsa <pooya@pi0.ir>",
+  "license": "MIT"
+}
