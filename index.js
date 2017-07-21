@@ -1,7 +1,6 @@
 function isHTTPS(req, xForwardedProto = true) {
     // Test using req.connection.encrypted
     const encrypted = isEmpty(req.connection.encrypted) ? null : req.connection.encrypted === true
-
     if (encrypted) {
         return true
     }
