@@ -1,4 +1,6 @@
 # is-https
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/nuxt-community/is-https.svg)](https://greenkeeper.io/)
 > Check if the given request is HTTPS
 
 [![npm](https://img.shields.io/npm/dt/is-https.svg?style=flat-square)](https://npmjs.com/package/is-https)
