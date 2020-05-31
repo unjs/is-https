@@ -26,15 +26,15 @@ function isHTTPS(req: IncomingMessage, trustProxy: Boolean = true): Boolean | un
 
 ## Behaviour
 
-This function tries to use 2 different methods for HTTPS detection:
+`isHTTPS` function tries to use 2 different methods for HTTPS detection:
 
 - Test if `x-forwarded-proto` header contains `https`
- - Can be disabled by setting `truestProxy` argument to `false`
+  - Can be disabled by setting `trustProxy` argument to `false`
 - Test if `req.connection.encrypted` is `true`
 
 Returns either `true` or `false` based on checks or `undefined` if no check was reliable.
 
-**TIP** If you want to redirect users from `http` to `https`, it is better using `isHttps(req) === false` to avoid redirect loops.
+**TIP:** If you want to redirect users from `http` to `https`, it is better using `isHttps(req) === false` to avoid redirect loops.
 
 ## Related
 
