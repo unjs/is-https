@@ -5,29 +5,41 @@
 [![npm (scoped with tag)](https://img.shields.io/npm/v/is-https/latest.svg?style=flat-square)](https://npmjs.com/package/is-https)
 
 ## Usage
-Install package
+
+Install package:
+
 ```bash
-yarn add is-https # or npm install is-https
+yarn add is-https
+# or
+or npm install is-https
 ```
 
-Exported function blueprint is `isHTTPS(req, xForwardedProto=true): Boolean`.
+```js
+const isHTTPS = require('is-https')
+// or
+import isHTTPS from 'is-https'
+```
+
+```ts
+function isHTTPS(req: IncomingMessage, trustProxy: Boolean = true): Boolean | undefined
+```
 
 ## Behaviour
-This function tries to use 3 standard checks for HTTPS detection:
+
+This function tries to use 2 different methods for HTTPS detection:
+
+- Test if `x-forwarded-proto` header contains `https`
+ - Can be disabled by setting `truestProxy` argument to `false`
 - Test if `req.connection.encrypted` is `true`
-- Test if `req.protocol` is `https`
-- Test if `x-forwarded-proto` header contains `https` (Only when `xForwardedProto` argument is `true`)
 
-Return value:
+Returns either `true` or `false` based on checks or `undefined` if no check was reliable.
 
-- If **one** of tests is **passing**, function return `true`
-- If **all** tests are **unavailable**, function returns `null`
-- Else function returns `false`
-
-**TIP** It is always better checking with `isHttps(req) !== false` to avoid false positive redirects.
+**TIP** If you want to redirect users from `http` to `https`, it is better using `isHttps(req) === false` to avoid redirect loops.
 
 ## Related
+
 - [redirect-ssl](https://www.npmjs.com/package/redirect-ssl) - Connect middleware to enforce https
 
 ## License
-MIT - [Nuxt.js](https://nuxtjs.org)
+
+MIT
