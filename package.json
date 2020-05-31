@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "bili src/index.ts --minimal",
-    "release": "yarn build && standard-version && && npm publish && git push --follow-tags"
+    "release": "yarn build && standard-version && npm publish && git push --follow-tags"
   },
   "devDependencies": {
     "@types/node": "^14.0.6",
