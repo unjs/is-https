@@ -11,7 +11,7 @@ Install package:
 ```bash
 yarn add is-https
 # or
-or npm install is-https
+npm install is-https
 ```
 
 ```js
@@ -34,11 +34,11 @@ function isHTTPS(req: IncomingMessage, trustProxy: Boolean = true): Boolean | un
 
 Returns either `true` or `false` based on checks or `undefined` if no check was reliable.
 
-**TIP:** If you want to redirect users from `http` to `https`, it is better using `isHttps(req) === false` to avoid redirect loops.
+**TIP:** If you want to redirect users from `http` to `https`, it is better using `isHTTPS(req) === false` to avoid redirect loops.
 
 ## Related
 
-- [redirect-ssl](https://www.npmjs.com/package/redirect-ssl) - Connect middleware to enforce https
+- [redirect-ssl](https://www.npmjs.com/package/redirect-ssl) - Connect middleware to enforce HTTPS
 
 ## License
 
