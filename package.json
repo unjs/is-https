@@ -1,6 +1,6 @@
 {
   "name": "is-https",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Check if the given request is HTTPS",
   "repository": "nuxt-contrib/is-https",
   "license": "MIT",

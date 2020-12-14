@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/nuxt-contrib/is-https/compare/v3.0.0...v3.0.1) (2020-12-14)
+
+
+### Bug Fixes
+
+* **pkg:** add files field ([6913c08](https://github.com/nuxt-contrib/is-https/commit/6913c0840b580fa199b636b2cfa143565dfffa21))
+
 ## [3.0.0](https://github.com/nuxt-contrib/is-https/compare/v2.0.2...v3.0.0) (2020-12-14)
 
 
