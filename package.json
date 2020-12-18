@@ -5,6 +5,8 @@
   "repository": "nuxt-contrib/is-https",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "sideEffects": false,
   "types": "dist/index.d.ts",
   "files": [
     "dist"
