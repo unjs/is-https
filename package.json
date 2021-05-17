@@ -2,7 +2,7 @@
   "name": "is-https",
   "version": "3.0.2",
   "description": "Check if the given request is HTTPS",
-  "repository": "nuxt-contrib/is-https",
+  "repository": "unjs/is-https",
   "license": "MIT",
   "sideEffects": false,
   "exports": {
