@@ -1,6 +1,6 @@
 {
   "name": "is-https",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Check if the given request is HTTPS",
   "repository": "unjs/is-https",
   "license": "MIT",
