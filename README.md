@@ -1,27 +1,35 @@
 # is-https
-> Check if the given request is HTTPS
 
-[![npm](https://img.shields.io/npm/dt/is-https.svg?style=flat-square)](https://npmjs.com/package/is-https)
-[![npm (scoped with tag)](https://img.shields.io/npm/v/is-https/latest.svg?style=flat-square)](https://npmjs.com/package/is-https)
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Github Actions][github-actions-src]][github-actions-href]
+[![Codecov][codecov-src]][codecov-href]
+
+> Check if the given request is HTTPS
 
 ## Usage
 
 Install package:
 
-```bash
-yarn add is-https
-# or
+```sh
+# npm
 npm install is-https
+
+# yarn
+yarn add is-https
+
+# pnpm
+pnpm install is-https
 ```
+
+Import:
 
 ```js
-const isHTTPS = require('is-https')
-// or
-import isHTTPS from 'is-https'
-```
+// ESM
+import { isHTTPS } from 'unjs/is-https'
 
-```ts
-function isHTTPS(req: IncomingMessage, trustProxy: Boolean = true): Boolean | undefined
+// CommonJS
+const { isHTTPS } = require('unjs/is-https')
 ```
 
 ## Behaviour
@@ -40,6 +48,28 @@ Returns either `true` or `false` based on checks or `undefined` if no check was 
 
 - [redirect-ssl](https://www.npmjs.com/package/redirect-ssl) - Connect middleware to enforce HTTPS
 
+## 💻 Development
+
+- Clone this repository
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10)
+- Install dependencies using `pnpm install`
+- Run interactive tests using `pnpm dev`
+
 ## License
 
-MIT
+Made with 💛
+
+Published under [MIT License](./LICENSE).
+
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/is-https?style=flat-square
+[npm-version-href]: https://npmjs.com/package/is-https
+
+[npm-downloads-src]: https://img.shields.io/npm/dm/is-https?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/is-https
+
+[github-actions-src]: https://img.shields.io/github/workflow/status/unjs/is-https/ci/main?style=flat-square
+[github-actions-href]: https://github.com/unjs/is-https/actions?query=workflow%3Aci
+
+[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/is-https/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/unjs/is-https
