@@ -26,10 +26,10 @@ Import:
 
 ```js
 // ESM
-import { isHTTPS } from 'unjs/is-https'
+import { isHTTPS } from "unjs/is-https"
 
 // CommonJS
-const { isHTTPS } = require('unjs/is-https')
+const { isHTTPS } = require("unjs/is-https")
 ```
 
 ## Behaviour
@@ -48,10 +48,11 @@ Returns either `true` or `false` based on checks or `undefined` if no check was 
 
 - [redirect-ssl](https://www.npmjs.com/package/redirect-ssl) - Connect middleware to enforce HTTPS
 
-## 💻 Development
+## Development
 
 - Clone this repository
-- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10)
+- Install latest LTS version of [Node.js](https://nodejs.org/en/)
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
 - Install dependencies using `pnpm install`
 - Run interactive tests using `pnpm dev`
 
@@ -62,14 +63,12 @@ Made with 💛
 Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/is-https?style=flat-square
 [npm-version-href]: https://npmjs.com/package/is-https
-
 [npm-downloads-src]: https://img.shields.io/npm/dm/is-https?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/is-https
-
 [github-actions-src]: https://img.shields.io/github/workflow/status/unjs/is-https/ci/main?style=flat-square
 [github-actions-href]: https://github.com/unjs/is-https/actions?query=workflow%3Aci
-
 [codecov-src]: https://img.shields.io/codecov/c/gh/unjs/is-https/main?style=flat-square
 [codecov-href]: https://codecov.io/gh/unjs/is-https
