@@ -2,6 +2,10 @@
   "name": "is-https",
   "version": "4.0.0",
   "description": "Check if the given request is HTTPS",
+  "author": "Pooya Parsa <pooya@pi0.ir>",
+  "contributors": [
+    "Nozomu Ikuta <16436160+NozomuIkuta@users.noreply.github.com>"
+  ],
   "repository": "unjs/is-https",
   "license": "MIT",
   "sideEffects": false,
