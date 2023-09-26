@@ -30,7 +30,7 @@ describe("is-https", () => {
   for (const { description, input, output } of tests) {
     it(description, () => {
       expect(isHTTPS(...(input as unknown as [IncomingMessage, boolean]))).eq(
-        output
+        output,
       );
     });
   }

@@ -3,7 +3,7 @@ import type { TLSSocket } from "node:tls";
 
 export function isHTTPS(
   req: IncomingMessage,
-  trustProxy = true
+  trustProxy = true,
 ): boolean | undefined {
   // Check x-forwarded-proto header
   const _xForwardedProto =
@@ -21,7 +21,7 @@ export function isHTTPS(
     ? (req.connection as TLSSocket).encrypted
     : undefined;
   const encryptedCheck =
-    _encrypted !== undefined ? _encrypted === true : undefined;
+    _encrypted === undefined ? undefined : _encrypted === true;
   if (encryptedCheck) {
     return true;
   }
