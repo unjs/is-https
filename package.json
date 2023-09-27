@@ -2,28 +2,44 @@
   "name": "is-https",
   "version": "4.0.0",
   "description": "Check if the given request is HTTPS",
+  "author": "Pooya Parsa <pooya@pi0.ir>",
   "repository": "unjs/is-https",
   "license": "MIT",
   "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "siroc build",
-    "release": "yarn build && standard-version && npm publish && git push --follow-tags"
+    "build": "unbuild",
+    "dev": "vitest dev",
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
+    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
+    "prepack": "pnpm run build",
+    "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm test:types && vitest run --coverage",
+    "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "siroc": "latest",
-    "standard-version": "latest"
-  }
+    "@types/node": "^20.5.4",
+    "@vitest/coverage-v8": "^0.34.2",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.47.0",
+    "eslint-config-unjs": "^0.2.1",
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6",
+    "unbuild": "^2.0.0",
+    "vitest": "^0.34.2"
+  },
+  "packageManager": "pnpm@8.6.12"
 }
